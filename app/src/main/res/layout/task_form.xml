@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_blue"
+    android:id="@+id/contact_card"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/card_details">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/cards"
+                android:background="@drawable/button_background_login">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="5dp"
+                        app:cardBackgroundColor="@color/back_blue"
+                        app:cardElevation="15dp"
+                        app:cardUseCompatPadding="true">
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/header"
+                            android:id="@+id/below">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_below="@+id/below"
+                                android:id="@+id/main"
+                                >
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:theme="@style/myTextInputLabel">
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/subject"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/subject"
+                                            android:textSize="16sp"
+                                            android:textColorHint="@color/tabs"
+                                            android:inputType="text" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="0dip">
+
+                                        <fr.ganfra.materialspinner.MaterialSpinner
+                                            android:id="@+id/task_type"
+                                            app:ms_arrowSize="16dp"
+                                            app:ms_hint="Task Type"
+                                            app:ms_hintColor="@color/tabs"
+                                            app:ms_baseColor="@color/tabs"
+                                            app:ms_highlightColor="@color/tabs"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            app:ms_arrowColor="@color/tabs"
+                                            app:ms_hintTextSize="16sp" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="0dip">
+                                        <fr.ganfra.materialspinner.MaterialSpinner
+                                            android:id="@+id/assigned_to"
+                                            app:ms_arrowSize="16dp"
+                                            app:ms_hint="Assigned To"
+                                            app:ms_hintColor="@color/tabs"
+                                            app:ms_baseColor="@color/tabs"
+                                            app:ms_highlightColor="@color/tabs"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            app:ms_arrowColor="@color/tabs"
+                                            app:ms_hintTextSize="16sp" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2"
+                                            android:theme="@style/myTextInputLabel">
+                                            <com.google.android.material.textfield.TextInputEditText
+                                                android:id="@+id/schedule_date"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="@string/schedule_date"
+                                                android:textSize="16sp"
+                                                android:textColorHint="@color/tabs"
+                                                android:inputType="text" />
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+
+                                            <ImageView
+                                                android:id="@+id/calendarGridView"
+                                                android:layout_width="match_parent"
+                                                android:inputType="text"
+                                                android:layout_margin="10dp"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/calendar" />
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                    </LinearLayout>
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="0dip">
+
+                                        <fr.ganfra.materialspinner.MaterialSpinner
+                                            android_id="@+id/status"
+                                            android:layout_width="match_parent"
+                                            android:id="@+id/status"
+                                            android:layout_height="wrap_content"
+                                            android_layout_width="match_parent"
+                                            android_layout_height="wrap_content"
+                                            app_ms_arrowColor="#0000FF"
+                                            android:padding="0dip"
+                                            app_ms_arrowSize="16dp"
+                                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                                            android:theme="@style/ThemeSpinner"
+                                            app_ms_floatingLabelColor="#00FF00"
+                                            app_ms_floatingLabelText="floating label"
+                                            app_ms_hint="hint"
+                                            app_ms_hintColor="#00FF00"
+                                            app:ms_hintColor="@color/tabs"
+                                            app:ms_arrowColor="@color/tabs"
+                                            app_ms_multiline="true" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="0dip"
+                                        >
+
+                                        <fr.ganfra.materialspinner.MaterialSpinner
+                                            android_id="@+id/location"
+                                            android:layout_width="match_parent"
+                                            android:id="@+id/location"
+                                            android:layout_height="wrap_content"
+                                            android_layout_width="match_parent"
+                                            android_layout_height="wrap_content"
+                                            app_ms_arrowColor="#0000FF"
+                                            app_ms_arrowSize="16dp"
+                                            android:padding="0dip"
+                                            app_ms_floatingLabelColor="#00FF00"
+                                            app_ms_floatingLabelText="floating label"
+                                            app_ms_hint="Select Location"
+                                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                                            android:theme="@style/ThemeSpinner"
+                                            app_ms_hintColor="#00FF00"
+                                            app:ms_hintColor="@color/tabs"
+                                            app:ms_arrowColor="@color/tabs"
+                                            app_ms_multiline="true" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4"
+                                        android:id="@+id/account"
+                                        android:visibility="gone">
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="3">
+
+                                            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                                android:id="@+id/account_name"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textSize="16sp"
+                                                android:textColorHint="@color/tabs"
+                                                android:hint="@string/account_name"
+                                                android:completionThreshold="1" />
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_marginTop="23dp">
+
+                                            <ImageView
+                                                android:id="@+id/add_account"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_plus_24"/>
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:id="@+id/outcome"
+                                        android:visibility="gone">
+
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <fr.ganfra.materialspinner.MaterialSpinner
+                                                android:id="@+id/outcomes"
+                                                app:ms_arrowSize="16dp"
+                                                app:ms_hint="Outcomes"
+                                                app:ms_hintColor="@color/tabs"
+                                                app:ms_baseColor="@color/tabs"
+                                                app:ms_highlightColor="@color/tabs"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                app:ms_arrowColor="@color/tabs"
+                                                app:ms_hintTextSize="16sp"
+                                                />
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4"
+                                        android:id="@+id/contact"
+                                        android:visibility="gone">
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="3">
+
+                                            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                                android:id="@+id/contact_name"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textSize="16sp"
+                                                android:textColorHint="@color/tabs"
+                                                android:hint="@string/contact_name"
+                                                android:completionThreshold="1" />
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_marginTop="23dp">
+
+                                            <ImageView
+                                                android:id="@+id/add_contact"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_plus_24"/>
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4"
+                                        android:id="@+id/opportunity"
+                                        android:visibility="gone">
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="3">
+
+                                            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                                android:id="@+id/opportunity_name"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textSize="16sp"
+                                                android:textColorHint="@color/tabs"
+                                                android:hint="@string/opp_name"
+                                                android:completionThreshold="1" />
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_marginTop="23dp">
+
+                                            <ImageView
+                                                android:id="@+id/add_opportunity"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_plus_24"/>
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                    </LinearLayout>
+
+
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:theme="@style/myTextInputLabel">
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/remark"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/remark"
+                                            android:textSize="16sp"
+                                            android:textColorHint="@color/tabs"
+                                            android:inputType="textMultiLine" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/btnLayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="40dp"
+                                        android:weightSum="4">
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColorHint="@color/White"
+                                            android:orientation="horizontal">
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:layout_margin="10dp"
+                                                android:layout_marginBottom="70dp">
+                                                <androidx.appcompat.widget.AppCompatButton
+                                                    android:id="@+id/cancel"
+                                                    android:layout_width="10dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="left"
+                                                    android:layout_weight="2"
+                                                    android:background="@drawable/button_background"
+                                                    android:gravity="center"
+                                                    android:text="@string/cancel"
+                                                    android:textColor="@android:color/white"
+                                                    android:textSize="16sp" />
+
+                                                <View
+                                                    android:layout_width="41dp"
+                                                    android:layout_height="fill_parent"
+                                                    android:backgroundTint="@color/back_blue"
+                                                    android:background="@color/White" />
+
+                                                <androidx.appcompat.widget.AppCompatButton
+                                                    android:id="@+id/save"
+                                                    android:layout_width="10dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:layout_weight="2"
+                                                    android:background="@drawable/button_background"
+                                                    android:gravity="center"
+                                                    android:text="@string/save"
+                                                    android:textColor="@android:color/white"
+                                                    android:textSize="16sp" />
+                                            </LinearLayout>
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </ScrollView>
+
+
+                        <!--                    </LinearLayout>-->
+
+                    </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

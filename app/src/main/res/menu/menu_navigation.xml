@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="all"
+       >
+        <item
+            android:id="@+id/home"
+            app:actionLayout="@layout/menu_navigation_items"
+            tools:ignore="MenuTitle" />
+        <item
+            android:id="@+id/settings"
+            android:title="Settings"
+            app:actionLayout="@layout/menu_navigation_items"
+            android:icon="@drawable/ic_setting"/>
+        <item
+            android:id="@+id/trash"
+            android:title="History"
+            app:actionLayout="@layout/menu_navigation_items"
+            android:icon="@drawable/ic_trash"/>
+        <item
+            android:id="@+id/logout"
+            android:title="Logout"
+            app:actionLayout="@layout/menu_navigation_items"
+            android:icon="@drawable/ic_exit"/>
+    </group>
+</menu>

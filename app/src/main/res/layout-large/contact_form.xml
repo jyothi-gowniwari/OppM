@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_blue"
+    android:id="@+id/contact_card"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/card_details">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/cards"
+                android:background="@drawable/button_background_login">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    app:cardBackgroundColor="@color/back_blue"
+                    app:cardElevation="15dp"
+                    app:cardUseCompatPadding="true">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/header"
+                        android:id="@+id/below">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_below="@+id/below"
+                            android:id="@+id/main">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="fill_horizontal"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2"
+                                    >
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        >
+                                        <fr.ganfra.materialspinner.MaterialSpinner
+                                            android:id="@+id/firstname"
+                                            app:ms_arrowSize="16dp"
+                                            app:ms_hint="Facility Type"
+                                            app:ms_hintColor="@color/tabs"
+                                            app:ms_baseColor="@color/tabs"
+                                            app:ms_highlightColor="@color/tabs"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            app:ms_arrowColor="@color/tabs"
+                                            app:ms_hintTextSize="16sp"
+                                            />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:theme="@style/myTextInputLabel"
+                                        android:layout_weight="1"
+                                        android:layout_marginTop="8dp">
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/editFirstname"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/first_name"
+                                            android:textSize="16sp"
+                                            android:textColorHint="@color/tabs"
+                                            android:inputType="text" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:theme="@style/myTextInputLabel">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/editLastname"
+                                        android:layout_width="match_parent"
+                                        android:inputType="text"
+                                        android:textColorHint="@color/tabs"
+                                        android:textSize="16sp"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/last_name" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:theme="@style/myTextInputLabel">
+                                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                            android:id="@+id/account_name"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Account Name"
+                                            android:textSize="16sp"
+                                            android:completionThreshold="1"
+                                            android:textColorHint="@color/tabs"
+                                            android:inputType="text" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:layout_marginTop="23dp">
+                                        <ImageView
+                                            android:id="@+id/add_account"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_plus_24"/>
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/specilization"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Specilization"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/job_title"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Specilization"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:theme="@style/myTextInputLabel">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/editMobilephone"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/custom_mobile"
+                                        android:textSize="16sp"
+                                        android:textColorHint="@color/tabs"
+                                        android:inputType="number" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:theme="@style/myTextInputLabel">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/editEmailid"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/email_id"
+                                        android:textSize="16sp"
+                                        android:textColorHint="@color/tabs"
+                                        android:inputType="number" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/assigned_to"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Assigned To"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/contact_type"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Contact Type"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/contact_source"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Contact Source"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <LinearLayout
+                                    android:id="@+id/btnLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="40dp"
+                                    android:weightSum="4">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColorHint="@color/White"
+                                        android:orientation="horizontal">
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:layout_margin="10dp"
+                                            android:layout_marginBottom="70dp">
+                                            <androidx.appcompat.widget.AppCompatButton
+                                                android:id="@+id/cancel"
+                                                android:layout_width="10dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="left"
+                                                android:layout_weight="2"
+                                                android:background="@drawable/button_background"
+                                                android:gravity="center"
+                                                android:text="@string/cancel"
+                                                android:textColor="@android:color/white"
+                                                android:textSize="16sp" />
+
+                                            <View
+                                                android:layout_width="41dp"
+                                                android:layout_height="fill_parent"
+                                                android:backgroundTint="@color/back_blue"
+                                                android:background="@color/White" />
+
+                                            <androidx.appcompat.widget.AppCompatButton
+                                                android:id="@+id/save"
+                                                android:layout_width="10dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="2"
+                                                android:background="@drawable/button_background"
+                                                android:gravity="center"
+                                                android:text="@string/save"
+                                                android:textColor="@android:color/white"
+                                                android:textSize="16sp" />
+                                        </LinearLayout>
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+
+
+                    <!--                    </LinearLayout>-->
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

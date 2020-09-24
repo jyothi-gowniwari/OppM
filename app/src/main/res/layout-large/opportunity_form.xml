@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_blue"
+    android:id="@+id/contact_card"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/card_details">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/cards"
+                android:background="@drawable/button_background_login">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    app:cardBackgroundColor="@color/back_blue"
+                    app:cardElevation="15dp"
+                    app:cardUseCompatPadding="true">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/header"
+                        android:id="@+id/below">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_below="@+id/below"
+                            android:id="@+id/main">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="fill_horizontal"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="vertical">
+
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/sales_stage"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Sales Stage"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        app:ms_floatingLabelColor="@color/tabs"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:theme="@style/myTextInputLabel">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/editoppname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/opp_name"
+                                        android:textSize="16sp"
+                                        android:textColorHint="@color/tabs"
+                                        android:inputType="text" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/assigned_to"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Assigned To"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        app:ms_floatingLabelColor="@color/tabs"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4"
+                                    android:id="@+id/contact">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="3"
+                                        android:theme="@style/myTextInputLabel">
+
+                                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                            android:id="@+id/contact_name"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:textSize="16sp"
+                                            android:textColorHint="@color/tabs"
+                                            android:hint="@string/contact_name"
+                                            android:completionThreshold="1" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:layout_marginTop="23dp">
+
+                                        <ImageView
+                                            android:id="@+id/add_contact"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_plus_24"/>
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4"
+                                    android:id="@+id/account">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="3"
+                                        android:theme="@style/myTextInputLabel">
+
+                                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                            android:id="@+id/account_name"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:textSize="16sp"
+                                            android:textColorHint="@color/tabs"
+                                            android:hint="@string/account_name"
+                                            android:completionThreshold="1" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:layout_marginTop="23dp">
+
+                                        <ImageView
+                                            android:id="@+id/add_account"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_plus_24"/>
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/sales_person"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Sales Person"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        app:ms_floatingLabelColor="@color/tabs"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/location"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Location"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        app:ms_floatingLabelColor="@color/tabs"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/lead_source"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Lead Source"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        app:ms_floatingLabelColor="@color/tabs"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:theme="@style/myTextInputLabel">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/remark"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/remark_sales"
+                                        android:textSize="16sp"
+                                        android:textColorHint="@color/tabs"
+                                        android:inputType="textMultiLine" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                        android:textAllCaps="true"
+                                        android:id="@+id/lead_details"
+                                        android:textStyle="bold"
+                                        android:visibility="gone"
+                                        android:text="Lead Details"
+                                        android:background="@color/black"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:textColor="@color/White"
+                                        android:layout_gravity="center"
+                                        android:textSize="16sp"/>
+
+
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android_id="@+id/department"
+                                        android:visibility="gone"
+                                        android:layout_width="match_parent"
+                                        android:id="@+id/department"
+                                        android:layout_height="wrap_content"
+                                        android_layout_width="match_parent"
+                                        android_layout_height="wrap_content"
+                                        app_ms_arrowColor="#0000FF"
+                                        style="@style/Widget.AppCompat.Spinner.Underlined"
+                                        android:theme="@style/ThemeSpinner"
+                                        app_ms_arrowSize="16dp"
+                                        app_ms_floatingLabelColor="#00FF00"
+                                        app_ms_floatingLabelText="floating label"
+                                        app_ms_hint="hint"
+                                        app_ms_hintColor="#00FF00"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app_ms_multiline="true" />
+                                </LinearLayout>
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/ratings"
+                                    android:visibility="gone">
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android_id="@+id/rating"
+                                        android:layout_width="match_parent"
+                                        android:id="@+id/rating"
+                                        android:layout_height="wrap_content"
+                                        android_layout_width="match_parent"
+                                        android_layout_height="wrap_content"
+                                        app_ms_arrowColor="#0000FF"
+                                        style="@style/Widget.AppCompat.Spinner.Underlined"
+                                        android:theme="@style/ThemeSpinner"
+                                        app_ms_arrowSize="16dp"
+                                        app_ms_floatingLabelColor="#00FF00"
+                                        app_ms_floatingLabelText="floating label"
+                                        app_ms_hint="hint"
+                                        app_ms_hintColor="#00FF00"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app_ms_multiline="true" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/intrest_types"
+                                    android:visibility="gone">
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/intrest_type"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Interest Type"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:visibility="gone"
+                                    android:id="@+id/opportunity">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                        android:textAllCaps="true"
+                                        android:textStyle="bold"
+                                        android:text="Opportunity Details"
+                                        android:background="@color/black"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:textColor="@color/White"
+                                        android:layout_gravity="center"
+                                        android:textSize="16sp"/>
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/prospect_type"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Prospect Type"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp"
+                                        />
+
+                                </LinearLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/sales_types"
+                                    android:visibility="gone">
+
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/sales_type"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Sales Type"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/win_probs"
+                                    android:visibility="gone">
+
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/win_prob"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Win Probability"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/support_requireds"
+                                    android:visibility="gone"
+                                    >
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/support_required"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Support Required"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4"
+                                    android:id="@+id/exp_po_dates"
+                                    android:visibility="gone">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:theme="@style/myTextInputLabel">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/exp_date"
+                                            android:layout_width="match_parent"
+                                            android:inputType="text"
+                                            android:textSize="16dp"
+                                            android:textColorHint="@color/tabs"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Expected PO Date" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/calendarexpodate"
+                                            android:layout_width="match_parent"
+                                            android:inputType="text"
+                                            android:layout_margin="10dp"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/calendar" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4"
+                                    android:id="@+id/exp_del_date"
+                                    android:visibility="gone">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:theme="@style/myTextInputLabel">
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/exp_del_dates"
+                                            android:layout_width="match_parent"
+                                            android:inputType="text"
+                                            android:textSize="16dp"
+                                            android:textColor="@color/black"
+                                            android:textColorHint="@color/tabs"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Expected Delivery Date" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/calendarexdeliverydate"
+                                            android:layout_width="match_parent"
+                                            android:inputType="text"
+                                            android:layout_margin="10dp"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/calendar" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/pndts"
+                                    android:visibility="gone"
+                                    >
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/pndt"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="PNDT/AERB Availbale"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4"
+                                    android:paddingBottom="5dp"
+                                    android:id="@+id/demo_dones"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Demo Done"
+                                        android:layout_weight="2"
+                                        android:textColor="@color/tabs"></TextView>
+                                    <androidx.appcompat.widget.AppCompatCheckBox
+                                        android:id="@+id/demodonecheck"
+                                        android:layout_weight="2"
+                                        android:buttonTint="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4"
+                                    android:id="@+id/si"
+                                    android:paddingBottom="5dp"
+                                    android:visibility="gone">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="S and I"
+                                        android:layout_weight="2"
+                                        android:textColor="@color/tabs">
+                                    </TextView>
+                                    <androidx.appcompat.widget.AppCompatCheckBox
+                                        android:id="@+id/s_i"
+                                        android:layout_weight="2"
+                                        android:buttonTint="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4"
+                                    android:id="@+id/demo_dates"
+                                    android:visibility="gone">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:theme="@style/myTextInputLabel">
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/demo_date"
+                                            android:layout_width="match_parent"
+                                            android:inputType="text"
+                                            android:textSize="16dp"
+                                            android:textColorHint="@color/tabs"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Demo Date" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+                                        <ImageView
+                                            android:id="@+id/calendarDemoDate"
+                                            android:layout_width="match_parent"
+                                            android:inputType="text"
+                                            android:layout_margin="10dp"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/calendar" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4"
+                                    android:id="@+id/funding_requireds"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/fund_req"
+                                        android:layout_weight="2"
+                                        android:textColor="@color/tabs"></TextView>
+                                    <androidx.appcompat.widget.AppCompatCheckBox
+                                        android:id="@+id/funding_required"
+                                        android:layout_weight="2"
+                                        android:buttonTint="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4"
+                                    android:id="@+id/site"
+                                    android:visibility="gone">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Site Readiness"
+                                        android:layout_weight="2"
+                                        android:textColor="@color/tabs">
+                                    </TextView>
+                                    <androidx.appcompat.widget.AppCompatCheckBox
+                                        android:id="@+id/site_reads"
+                                        android:layout_weight="2"
+                                        android:checked="true"
+                                        android:buttonTint="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/multi_product_deals"
+                                    android:visibility="gone"
+                                    >
+                                    <fr.ganfra.materialspinner.MaterialSpinner
+                                        android:id="@+id/multi_product_deal"
+                                        app:ms_arrowSize="16dp"
+                                        app:ms_hint="Multi Products Deal"
+                                        app:ms_hintColor="@color/tabs"
+                                        app:ms_baseColor="@color/tabs"
+                                        app:ms_highlightColor="@color/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:ms_arrowColor="@color/tabs"
+                                        app:ms_hintTextSize="16sp" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:id="@+id/descrptions"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                        android:textAllCaps="true"
+                                        android:textStyle="bold"
+                                        android:text="Description Details"
+                                        android:background="@color/black"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:textColor="@color/White"
+                                        android:layout_gravity="center"
+                                        android:textSize="16sp"/>
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/descrption"
+                                        android:layout_width="match_parent"
+                                        android:inputType="textMultiLine"
+                                        android:lines="3"
+                                        android:textColorHint="@color/tabs"
+                                        android:textSize="16dp"
+                                        android:maxLines="3"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/descrption" />
+
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_centerHorizontal="true"
+                                    android:textAllCaps="true"
+                                    android:textStyle="bold"
+                                    android:id="@+id/product_details"
+                                    android:visibility="gone"
+                                    android:text="Product Details"
+                                    android:background="@color/black"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/White"
+                                    android:layout_gravity="center"
+                                    android:textSize="16sp"/>
+                                <TableLayout
+                                    android:id="@+id/tables"
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="horizontal"
+                                    android:stretchColumns="0,1">
+                                </TableLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone"
+                                    android:id="@+id/productd">
+                                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                        android:id="@+id/product_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:textColor="@color/tabs"
+                                        android:textColorHint="@color/tabs"
+                                        android:hint="@string/product_name"
+                                        android:completionThreshold="1" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/quantity"
+                                        android:gravity="right"
+                                        android:text="1"
+                                        android:layout_marginTop="10dp"
+                                        android:textColor="@color/tabs"
+                                        android:textStyle="bold"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="1"></TextView>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/listprice"
+                                        android:text="0"
+                                        android:layout_marginTop="10dp"
+                                        android:textStyle="bold"
+                                        android:layout_gravity="right"
+                                        android:gravity="right"
+                                        android:textColor="@color/tabs"
+                                        android:layout_weight="1"></TextView>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/totals"
+                                        android:text="0"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_gravity="right"
+                                        android:textStyle="bold"
+                                        android:gravity="right"
+                                        android:textColor="@color/tabs"
+                                        android:layout_weight="1"></TextView>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="4"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:visibility="gone"
+                                    android:id="@+id/taxs">
+
+                                    <TextView
+                                        android:id="@+id/tax"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="3"
+                                        android:textColor="@color/tabs"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:text="(+)Tax"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/tax1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/tabs"
+                                        android:text="0"></TextView>
+
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="4"
+                                    android:id="@+id/netprices"
+                                    android:visibility="gone"
+                                    android:layout_marginTop="10dp">
+
+                                    <TextView
+                                        android:id="@+id/netprice1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="3"
+                                        android:gravity="center"
+                                        android:textColor="@color/tabs"
+                                        android:textStyle="bold"
+                                        android:text="Net Price"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/netprice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:textColor="@color/tabs"
+                                        android:textStyle="bold"
+                                        android:text="0"></TextView>
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="4"
+                                    android:visibility="gone"
+                                    android:id="@+id/itemtotals"
+                                    android:layout_marginTop="30dp">
+
+                                    <TextView
+                                        android:id="@+id/itemtext"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="3"
+                                        android:gravity="center"
+                                        android:textColor="@color/tabs"
+                                        android:textStyle="bold"
+                                        android:text="Items Total"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/item_total"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:textColor="@color/tabs"
+                                        android:textStyle="bold"
+                                        android:text="0"></TextView>
+
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="4"
+                                    android:visibility="gone"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:id="@+id/discounts">
+
+                                    <TextView
+                                        android:id="@+id/textdis"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="3"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/tabs"
+                                        android:text="(-) Overall Discount (0)"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/discount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="1"
+                                        android:textColor="@color/tabs"
+                                        android:gravity="right"
+                                        android:textStyle="bold"
+                                        android:text="0"></TextView>
+
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="4"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:visibility="gone"
+                                    android:id="@+id/chargess">
+
+                                    <TextView
+                                        android:id="@+id/textcharge"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="3"
+                                        android:textColor="@color/tabs"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:text="(+) Charges"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/charges"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="1"
+                                        android:textColor="@color/tabs"
+                                        android:gravity="right"
+                                        android:textStyle="bold"
+                                        android:text="0"></TextView>
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="4"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:visibility="gone"
+                                    android:id="@+id/pretaxs">
+
+                                    <TextView
+                                        android:id="@+id/textpre"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="3"
+                                        android:gravity="center"
+                                        android:textColor="@color/tabs"
+                                        android:textStyle="bold"
+                                        android:text="Pre Tax Total"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/pretax"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="1"
+                                        android:textStyle="bold"
+                                        android:gravity="right"
+                                        android:textColor="@color/tabs"
+                                        android:text="0"></TextView>
+
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="4"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:id="@+id/taxcharges"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/texttaxcha"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="3"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/tabs"
+                                        android:gravity="center"
+                                        android:text="(+) Taxes On Charges"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/tax_charge"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="1"
+                                        android:textColor="@color/tabs"
+                                        android:gravity="right"
+                                        android:textStyle="bold"
+                                        android:text="0"></TextView>
+
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="4"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:visibility="gone"
+                                    android:id="@+id/deducatedtaxs">
+
+                                    <TextView
+                                        android:id="@+id/textded"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="3"
+                                        android:textColor="@color/tabs"
+                                        android:textStyle="bold"
+                                        android:gravity="center"
+                                        android:text="(-) Deducted Taxes"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/deducated_tax"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="1"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/tabs"
+                                        android:gravity="right"
+                                        android:text="0">
+
+                                    </TextView>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="4"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:id="@+id/adjustments"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/textadj"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/tabs"
+                                        android:text="Adjustment"></TextView>
+
+                                    <androidx.appcompat.widget.AppCompatRadioButton
+                                        android:id="@+id/add"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:textStyle="bold"
+                                        android:checked="true"
+                                        android:textColor="@color/tabs"
+                                        android:gravity="center"
+                                        android:text="Add">
+
+                                    </androidx.appcompat.widget.AppCompatRadioButton>
+                                    <androidx.appcompat.widget.AppCompatRadioButton
+                                        android:id="@+id/deduct"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/tabs"
+                                        android:gravity="center"
+                                        android:text="Deduct"></androidx.appcompat.widget.AppCompatRadioButton>
+
+                                    <TextView
+                                        android:id="@+id/adjustment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/tabs"
+                                        android:text="0"></TextView>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="4"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:visibility="gone"
+                                    android:id="@+id/grands">
+
+                                    <TextView
+                                        android:id="@+id/textgrand"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="3"
+                                        android:textColor="@color/tabs"
+                                        android:textStyle="bold"
+                                        android:gravity="center"
+                                        android:text="Grand Total"></TextView>
+                                    <TextView
+                                        android:id="@+id/grand_total"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:textColor="@color/tabs"
+                                        android:textStyle="bold"
+                                        android:text="0">
+                                    </TextView>
+                                </LinearLayout>
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="2dp"
+                                    android:theme="@style/myTextInputLabel">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/terms_condition"
+                                        android:layout_width="match_parent"
+                                        android:inputType="textMultiLine"
+                                        android:textColorHint="@color/tabs"
+                                        android:textSize="16dp"
+                                        android:maxLines="10"
+                                        android:layout_height="wrap_content"
+                                        />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btnLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="40dp"
+                                    android:weightSum="4">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColorHint="@color/White"
+                                        android:orientation="horizontal">
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:layout_margin="10dp"
+                                            android:layout_marginBottom="70dp">
+                                            <androidx.appcompat.widget.AppCompatButton
+                                                android:id="@+id/cancel"
+                                                android:layout_width="10dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="left"
+                                                android:layout_weight="2"
+                                                android:background="@drawable/button_background"
+                                                android:gravity="center"
+                                                android:text="@string/cancel"
+                                                android:textColor="@android:color/white"
+                                                android:textSize="16sp" />
+
+                                            <View
+                                                android:layout_width="41dp"
+                                                android:layout_height="fill_parent"
+                                                android:backgroundTint="@color/back_blue"
+                                                android:background="@color/White" />
+
+                                            <androidx.appcompat.widget.AppCompatButton
+                                                android:id="@+id/save"
+                                                android:layout_width="10dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="2"
+                                                android:background="@drawable/button_background"
+                                                android:gravity="center"
+                                                android:text="@string/save"
+                                                android:textColor="@android:color/white"
+                                                android:textSize="16sp" />
+                                        </LinearLayout>
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+
+
+                    <!--                    </LinearLayout>-->
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,2265 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/contact_card"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/card_details">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/cards">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/slivergray"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/White">
+                        <RelativeLayout
+                            android:id="@+id/header"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@color/tabs1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:layout_centerHorizontal="true"
+                                android:textAllCaps="true"
+                                android:paddingTop="10dp"
+                                android:textStyle="bold"
+                                android:text="@string/opportunity_details"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/White"
+                                android:textSize="16sp"/>
+                            <Button
+                                android:id="@+id/close"
+                                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:drawableTint="@color/White"
+                                android:drawableLeft="@drawable/ic_close_black_24dp"
+                                android:textColor="@color/White"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header"
+                    android:id="@+id/below">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/below"
+                        android:id="@+id/main"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/sales_stages"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:weightSum="4"
+                            android:layout_below="@+id/main">
+
+                            <TextView
+                                android:id="@+id/text_opp"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textStyle="bold"
+                                android:text="Sales Stage"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/sales_stage"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/suject_ids"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/sales_stages"
+                            android:weightSum="4"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:id="@+id/subject1"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/names"
+                                android:paddingLeft="16dp"
+                                android:text="Opportunity Name"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+
+                            <TextView
+                                android:id="@+id/opp_name"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/subject"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp" />
+
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/task_types"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/suject_ids"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp">
+
+                            <TextView
+                                android:id="@+id/task"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/task_types"
+                                android:paddingLeft="16dp"
+                                android:text="Assigned To"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/assigned_to"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/task"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/related_ids"
+                            android:paddingBottom="10dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_below="@+id/task_types"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/text_rel"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:layout_below="@+id/bill_city"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Contact Name"
+                                android:textStyle="bold"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/contact_name"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_rel"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/assigned_user_ids"
+                            android:layout_below="@+id/related_ids"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/text_ass"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:layout_below="@+id/bill_city"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textStyle="bold"
+                                android:text="Opportunity Number"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/opp_no"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_ass"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/outcomess"
+                            android:layout_below="@+id/assigned_user_ids">
+
+                            <TextView
+                                android:id="@+id/text_outcome"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Account Name"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/account_name"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/second_sales_persons"
+                            android:layout_below="@+id/outcomess">
+
+                            <TextView
+                                android:id="@+id/text_createdtime"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textStyle="bold"
+                                android:text="Secondary Sales Person"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/second_sales_person"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/locations"
+                            android:layout_below="@+id/second_sales_persons">
+
+                            <TextView
+                                android:id="@+id/text_modifiedtime"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textStyle="bold"
+                                android:text="Location"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/location"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:paddingBottom="10dp"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/lead_sources"
+                            android:layout_below="@+id/locations">
+
+                            <TextView
+                                android:id="@+id/text_activitytype"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:textStyle="bold"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Lead Source"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/lead_source"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/remark_sales_persons"
+                            android:layout_below="@+id/lead_sources">
+
+                            <TextView
+                                android:id="@+id/text_modifiedby"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Remark For Sales Person"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/remark_sales_person"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/pincodes"
+                            android:layout_below="@+id/remark_sales_persons">
+
+                            <TextView
+                                android:id="@+id/text_pincode"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Segment"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/segment"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/schedule_dates"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/pincodes">
+
+                            <TextView
+                                android:id="@+id/text_sc"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/schedule_dates"
+                                android:paddingLeft="16dp"
+                                android:text="Modality"
+                                android:textStyle="bold"
+                                android:paddingRight="16dp"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/modality"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_sc"
+                                android:layout_weight="1"
+                                android:background="@color/linecolor"
+                                android:gravity="center"
+                                android:text="2020-03-12"
+                                android:textColor="@color/White"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/circles"
+                            android:layout_marginTop="4dp"
+                            android:weightSum="4"
+                            android:layout_below="@+id/schedule_dates">
+
+                            <TextView
+                                android:id="@+id/text_loc"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Circle"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/circle"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_loc"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/statuss"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/circles">
+
+                            <TextView
+                                android:id="@+id/text_status"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Prospect Type"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/prospect_type"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/equip_details"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/statuss">
+
+                            <TextView
+                                android:id="@+id/text_equip_details"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Equipment Details"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/equip_detail"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/sales_types"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/equip_details">
+
+                            <TextView
+                                android:id="@+id/text_sales_types"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Sale Type"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/sales_type"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/win_probs"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/sales_types">
+
+                            <TextView
+                                android:id="@+id/text_win_probs"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Win Probability"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/win_prob"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="1"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/White"
+                                android:textSize="15sp"/>
+                            <TextView
+                                android:id="@+id/win_prob1"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="1"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/White"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/support_requireds"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/win_probs">
+
+                            <TextView
+                                android:id="@+id/text_support_required"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Support Required"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/support_required"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/exp_dates"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/support_requireds">
+
+                            <TextView
+                                android:id="@+id/text_exp_dates"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Expected PO Date"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/exp_date"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/exp_del_dates"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/exp_dates">
+
+                            <TextView
+                                android:id="@+id/text_exp_del_dates"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Expected Delivery Date"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/exp_del_date"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/pndts"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/exp_del_dates">
+
+                            <TextView
+                                android:id="@+id/text_pndts"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="PNDT / AERB Availbale"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/pndt"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/demo_dones"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/pndts">
+
+                            <TextView
+                                android:id="@+id/text_demo_dones"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Demo Done"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/demo_done"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/s_is"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/demo_dones">
+
+                            <TextView
+                                android:id="@+id/text_s_is"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="S and I"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/s_i"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/demo_dates"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/s_is">
+
+                            <TextView
+                                android:id="@+id/text_demo_dates"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Demo Date"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/demo_date"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/funding_requireds"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/demo_dates">
+
+                            <TextView
+                                android:id="@+id/text_funding_requireds"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Funding Required"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/funding_required"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/site_reads"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/funding_requireds">
+
+                            <TextView
+                                android:id="@+id/text_site_reads"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Site Readiness"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/site_read"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/support_persons"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/site_reads">
+
+                            <TextView
+                                android:id="@+id/text_support_persons"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Support Person"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/support_person"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/support_types"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/support_persons">
+
+                            <TextView
+                                android:id="@+id/text_support_types"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Support Type"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/support_type"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/multi_product_deals"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/support_types">
+
+                            <TextView
+                                android:id="@+id/text_multi_product_deals"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Multi Products Deal"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/multi_product_deal"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/departments"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/multi_product_deals">
+
+                            <TextView
+                                android:id="@+id/text_departments"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Department"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/department"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/ratings"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/departments">
+
+                            <TextView
+                                android:id="@+id/text_ratings"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Ratings"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/rating"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/intrest_types"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/ratings">
+
+                            <TextView
+                                android:id="@+id/text_intrest_types"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Interest Type"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/intrest_type"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+
+<!--                        <TableLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:id="@+id/tables">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:gravity="center"-->
+<!--                                android:layout_centerHorizontal="true"-->
+<!--                                android:textAllCaps="true"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:text="Product Details"-->
+<!--                                android:background="@color/black"-->
+<!--                                android:textAppearance="?android:attr/textAppearanceLarge"-->
+<!--                                android:textColor="@color/White"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:textSize="16sp"/>-->
+
+
+<!--                            <TableRow-->
+<!--                                android:background="@color/tabs"-->
+<!--                                android:padding="8dp">-->
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:textColor="@color/White"-->
+<!--                                    android:text="Product Name"/>-->
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:textColor="@color/White"-->
+<!--                                    android:text="Quantity"/>-->
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:textColor="@color/White"-->
+<!--                                    android:text="Unit Price"/>-->
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:textColor="@color/White"-->
+<!--                                    android:text="Total Price"/>-->
+<!--                            </TableRow>-->
+<!--                            <TableRow-->
+<!--                                android:background="@color/linecolor"-->
+<!--                                android:padding="8dp">-->
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:gravity="center"-->
+<!--                                android:id="@+id/item_name"-->
+<!--                                android:textColor="@android:color/white" />-->
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:id="@+id/quantity"-->
+<!--                                    android:textColor="@android:color/white" />-->
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:id="@+id/listprice"-->
+<!--                                    android:textColor="@android:color/white" />-->
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:id="@+id/total"-->
+<!--                                    android:textColor="@android:color/white" />-->
+<!--                            </TableRow>-->
+<!--                        </TableLayout>-->
+                        <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:gravity="center"
+                                                        android:layout_centerHorizontal="true"
+                                                        android:textAllCaps="true"
+                                                        android:textStyle="bold"
+                                                        android:text="Product Details"
+                                                        android:background="@color/black"
+                                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                                        android:textColor="@color/White"
+                                                        android:layout_gravity="center"
+                                                        android:textSize="16sp"/>
+                        <TableLayout
+                            android:id="@+id/tables"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="horizontal"
+                            android:stretchColumns="0,1">
+                        </TableLayout>
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/totals"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/tables">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_totals"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Total"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/total1"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/adjustments"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/totals">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_adjustments"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Adjustment"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/adjustment"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/charges"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/adjustments">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_charges"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Charges"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/charge"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/pre_tax_totals"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/totals">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_pre_tax_totals"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Pre Tax Total"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/pre_tax_total"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/sub_totals"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/pre_tax_totals">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_sub_totals"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Sub Total"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/sub_total"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/item_names"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/sub_totals">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_item_names"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Item Name"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/item_name1"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/quantitys"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/item_names">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_quantitys"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Quantity"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/quantity1"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/selling_prices"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/quantitys">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_selling_prices"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Selling Price"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/selling_price"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/item_comments"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/selling_prices">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_item_comments"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Item Comment"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/item_comment"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/item_dis_amounts"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/item_comments">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_item_dis_amounts"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Item Discount Amount"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/item_dis_amount"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/vats"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/item_dis_amounts">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_vats"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="VAT"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/vat"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/sales"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/vats">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_sales"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Sales"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/sale"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="4"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:id="@+id/services"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_below="@+id/sales">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_services"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/bill_district"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:text="Service"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/service"-->
+<!--                                style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/text_opp"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="15sp"/>-->
+
+<!--                        </LinearLayout>-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:visibility="gone"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/lost_reasons"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/services">
+
+                            <TextView
+                                android:id="@+id/text_lost_reasons"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Lost Reason"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/lost_reason"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:visibility="gone"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/competation_names"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/lost_reasons">
+
+                            <TextView
+                                android:id="@+id/text_competation_names"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Competition Name"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/competation_name"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:visibility="gone"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/competation_prices"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/competation_names">
+
+                            <TextView
+                                android:id="@+id/text_competation_prices"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Competition Price"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/competation_price"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:visibility="gone"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/lost_marks"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/competation_prices">
+
+                            <TextView
+                                android:id="@+id/text_lost_marks"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Lost Remark"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/lost_mark"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/descrptions"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/tables">
+
+                            <TextView
+                                android:id="@+id/text_descrptions"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Description"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/descrption"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/createdtimes"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/descrptions">
+
+                            <TextView
+                                android:id="@+id/text_createdtimes"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Created Time"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/createdtime"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/modifiedtimes"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/createdtimes">
+
+                            <TextView
+                                android:id="@+id/text_modifiedtime1"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Modified Time"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/modifiedtime"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/modifiedbys"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/modifiedtimes">
+
+                            <TextView
+                                android:id="@+id/text_modifiedby1"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Last Modified By"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/modifiedby"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/terms_conditions"
+                            android:weightSum="4"
+                            android:paddingLeft="16dp"
+                            android:layout_below="@+id/modifiedbys">
+
+                            <TextView
+                                android:id="@+id/text_remark"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:text="Terms_Condition"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="2"
+                                android:textStyle="bold"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/terms_condition"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="match_parent"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_remark"
+                                android:maxLines="1"
+                                android:lines="15"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,625 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/contact_card"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/card_details">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/cards">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/slivergray"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/White">
+                        <RelativeLayout
+                            android:id="@+id/header"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@color/tabs1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:layout_centerHorizontal="true"
+                                android:textAllCaps="true"
+                                android:paddingTop="10dp"
+                                android:textStyle="bold"
+                                android:text="@string/account_details"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/White"
+                                android:textSize="16sp"/>
+                            <Button
+                                android:id="@+id/close"
+                                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:drawableTint="@color/White"
+                                android:drawableLeft="@drawable/ic_close_black_24dp"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/opp_nos"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:weightSum="4"
+                            android:layout_below="@+id/header">
+
+                            <TextView
+                                android:id="@+id/text_opp"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textStyle="bold"
+                                android:text="Account Number"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/account_no"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/suject_ids"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/opp_nos"
+                            android:weightSum="4"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:id="@+id/subject1"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/names"
+                                android:paddingLeft="16dp"
+                                android:text="Account Name"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+
+                            <TextView
+                                android:id="@+id/account_name"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/subject"
+                                android:text="Subject"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp" />
+
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/task_types"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/suject_ids"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp">
+
+                            <TextView
+                                android:id="@+id/task"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/task_types"
+                                android:paddingLeft="16dp"
+                                android:text="Ownership Type"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/ownership_type"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/task"
+                                android:text="Task Type"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/related_ids"
+                            android:paddingBottom="10dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_below="@+id/task_types"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/text_rel"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:layout_below="@+id/bill_city"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Facility Type"
+                                android:textStyle="bold"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/facility_type"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_rel"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/assigned_user_ids"
+                            android:layout_below="@+id/related_ids"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/text_ass"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:layout_below="@+id/bill_city"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textStyle="bold"
+                                android:text="Assigned To"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/assigned_to"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_ass"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/outcomess"
+                            android:layout_below="@+id/assigned_user_ids">
+
+                            <TextView
+                                android:id="@+id/text_outcome"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Street"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/bill_street"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/createdtimes"
+                            android:layout_below="@+id/outcomess">
+
+                            <TextView
+                                android:id="@+id/text_createdtime"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textStyle="bold"
+                                android:text="City"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/bill_city"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/modifiedtimes"
+                            android:layout_below="@+id/createdtimes">
+
+                            <TextView
+                                android:id="@+id/text_modifiedtime"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textStyle="bold"
+                                android:text="District"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/bill_district"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:paddingBottom="10dp"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/activitytypes"
+                            android:layout_below="@+id/modifiedtimes">
+
+                            <TextView
+                                android:id="@+id/text_activitytype"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:textStyle="bold"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="State"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/bill_state"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/modifiedbys"
+                            android:layout_below="@+id/activitytypes">
+
+                            <TextView
+                                android:id="@+id/text_modifiedby"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Country"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/bill_country"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/pincodes"
+                            android:layout_below="@+id/modifiedbys">
+
+                            <TextView
+                                android:id="@+id/text_pincode"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Pin Code"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/pincode"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/schedule_dates"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/pincodes">
+
+                            <TextView
+                                android:id="@+id/text_sc"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/schedule_dates"
+                                android:paddingLeft="16dp"
+                                android:text="Created Time"
+                                android:textStyle="bold"
+                                android:paddingRight="16dp"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/createdtime"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_sc"
+                                android:layout_weight="2"
+                                android:background="@color/linecolor"
+                                android:gravity="left"
+                                android:text="2020-03-12"
+                                android:textColor="@color/White"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:id="@+id/locations"
+                            android:layout_marginTop="4dp"
+                            android:weightSum="4"
+                            android:layout_below="@+id/schedule_dates">
+
+                            <TextView
+                                android:id="@+id/text_loc"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Modified Time"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/modifiedtime"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_loc"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/statuss"
+                            android:paddingBottom="10dp"
+                            android:layout_below="@+id/locations">
+
+                            <TextView
+                                android:id="@+id/text_status"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/bill_district"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Modified By"
+                                android:textStyle="bold"
+                                android:layout_weight="2"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/modifiedby"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_opp"
+                                android:layout_weight="2"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/gray"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

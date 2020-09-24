@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">OppM</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="your_text">View</string>
+    
+    <string name="title_task">Task</string>
+    <string name="title_account">Account</string>
+    <string name="title_contact" >Contact</string>
+    <string name="title_opportunity">Opportunity</string>
+    <string name="custom_account">Account Name:</string>
+    <string name="custom_title">Creating New Account</string>
+    <string name="custom_ownership">Ownership Type:</string>
+    <string name="custom_facility">Facility Type:</string>
+    <string name="custom_manager">Account Manager:</string>
+    <string name="custom_mobile">Mobile Number</string>
+    <string name="email">Primary Email</string>
+    <string name="save">Save</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="bill_address">Billing Address</string>
+    <string name="ship_address">Shipping Address</string>
+    <string name="bill_city">Billing City</string>
+    <string name="ship_city">Shipping City</string>
+    <string name="bill_district">Billing District</string>
+    <string name="ship_district">Shipping District</string>
+    <string name="bill_state">Billing State</string>
+    <string name="ship_state">Shipping State</string>
+    <string name="bill_country">Billing Country</string>
+    <string name="ship_country">Shipping Country</string>
+    <string name="bill_pin">Billing PIN</string>
+    <string name="ship_pin">Shipping PIN</string>
+    <string name="website">Website</string>
+    <string name="Rs">\u20B9</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="login">CLICK HERE TO LOGIN</string>
+    <string name="opportunity">Opportunity</string>
+    <string name="price_quote">Proposal or Price Quote</string>
+    <string name="nagotiation_review">Negotiation or Review</string>
+    <string name="closed_won">Closed Won</string>
+    <string name="closed_lost">Closed Lost</string>
+    <string name="View_details">View Account Details</string>
+    <string name="account_details">View Account Details</string>
+    <string name="address_details">Address Details</string>
+    <string name="task_details">View Task Details</string>
+    <string name="create_account">Quick Create Account</string>
+    <string name="contact_details">View Contact Details</string>
+    <string name="opportunity_details">View Sales Stage Details</string>
+    <string name="opp_closure">Opportunity - Closed Won</string>
+    <string name="opp_congrats">Congratulations !! Please upload the necessary document(s) to close the deal</string>
+    <string name="opp_lost">Opportunity - Closed Lost</string>
+    <string name="tax">Tax</string>
+    <string name="charges">Charges</string>
+    <string name="ship_hand">Shipping and Handling</string>
+    <string name="del_charge">Delivery Charges</string>
+    <string name="tax_charge">Taxes On Charges</string>
+    <string name="ded_charge">Deducted Taxes</string>
+    <string name="discount">Discount</string>
+    <string name="opp_losts">Lost Reasons</string>
+
+
+<!--   // //New contact-->
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="opp_name">Opportunity Name</string>
+    <string name="account_name">Account Name</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="product_name">Product Name</string>
+    <string name="item_name">Item Name</string>
+    <string name="permission">Permission denied</string>
+    <string name="specialization">Specialization</string>
+    <string name="job_title">Job Title</string>
+    <string name="mobile_phone">Mobile Phone</string>
+    <string name="email_id">Email ID</string>
+    <string name="created_by">Created By</string>
+    <string name="contact_type">Contact Type</string>
+    <string name="dash">Dashboard</string>
+    <string name="back"><u>Go back</u></string>
+
+<!--    //New Task-->
+    <string name="subject">Subject</string>
+    <string name="assigned_to">Assigned To</string>
+    <string name="status">Status</string>
+    <string name="task_type">Task Type</string>
+    <string name="schedule_date">Schedule Date</string>
+    <string name="competition_name">Competition Name</string>
+
+    <string name="competition_price">Competition Price</string>
+    <string name="contact">Contact Name</string>
+    <string name="location">Location</string>
+    <string name="opportunities">Opportunities</string>
+    <string name="remark">Remark</string>
+    <string name="lost_remark">Lost Remark</string>
+    <string name="remark_sales">Remark For Sales Person</string>
+    <string name="descrption">Description</string>
+    <string name="terms_condition">Terms And Conditions</string>
+
+
+
+<!--    //Support Required-->
+    <string name="no_support">No Support Required</string>
+    <string name="product_valid">Product Validation Support</string>
+    <string name="price_sup">Price Support</string>
+    <string name="demo_req">Demo Required</string>
+    <string name="travel_sup">Travel Support</string>
+    <string name="fund_req">Funding Required</string>
+
+    <string name="viewGithub">View Github</string>
+
+
+
+    <string-array name="select_sales_stage">
+        <item>Filter by Sales Stage</item>
+    </string-array>
+
+    <string name="asteriskred"><font color='#cc0029'>*</font></string>
+
+    <string name="action_disable_drag">Disable drag</string>
+    <string name="action_enable_drag">Enable drag</string>
+    <string name="action_list">List (drag on touch image icon)</string>
+    <string name="action_grid_vertical">Grid vertical (drag on long press)</string>
+    <string name="action_grid_horizontal">Grid horizontal (drag on long press)</string>
+    <string name="popup_closedwon">Once you save the form in this Sales Stage, you cannot go back to Lead Stage after Saving</string>
+</resources>
+

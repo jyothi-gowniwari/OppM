@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_blue"
+    android:id="@+id/contact_card"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/luminary_controll"
+            android:id="@+id/card_details">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/cards"
+                android:background="@color/back_blue">
+
+<!--                <com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/sample1"-->
+<!--                    >-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/bottom_wrapper"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:weightSum="4"-->
+<!--                        android:orientation="vertical">-->
+
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/share"-->
+<!--                            android:src="@drawable/share"-->
+<!--                            android:layout_width="70dp"-->
+<!--                            android:paddingLeft="15dp"-->
+<!--                            android:layout_weight="2"-->
+<!--                            android:background="@color/back_blue"-->
+<!--                            android:paddingRight="15dp"-->
+<!--                            android:layout_height="match_parent" />-->
+<!--                        <View-->
+<!--                            android:layout_width="fill_parent"-->
+<!--                            android:layout_height="2dp"-->
+<!--                            android:background="@color/slivergray"-->
+<!--                            android:layout_below="@id/share"/>-->
+<!--                        <ImageView-->
+<!--                            android:id="@+id/edit"-->
+<!--                            android:src="@drawable/ic_launcher"-->
+<!--                            android:layout_width="70dp"-->
+<!--                            android:background="@color/back_blue"-->
+<!--                            android:layout_weight="2"-->
+<!--                            android:paddingLeft="15dp"-->
+<!--                            android:paddingRight="15dp"-->
+<!--                            android:layout_height="match_parent" />-->
+
+<!--                    </LinearLayout>-->
+
+                    <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/slivergray"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/White">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/suject_ids"
+                                android:weightSum="4"
+                                android:layout_marginTop="4dp">
+
+                                <TextView
+                                    android:id="@+id/subject"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/names"
+                                    android:paddingLeft="16dp"
+                                    android:text="Subject"
+                                    android:layout_weight="2"
+                                    android:textAllCaps="true"
+                                    android:paddingRight="16dp"
+                                    android:textColor="@color/gray"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"/>
+
+
+                                <TextView
+                                    android:id="@+id/task_type"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/subject"
+                                    android:text="Task Type"
+                                    android:textStyle="bold"
+                                    android:layout_weight="2"
+                                    android:paddingRight="16dp"
+                                    android:textColor="@color/gray"
+                                    android:textSize="15sp"
+                                    />
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/textViewOptions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:textColor="@color/linecolor"
+                                android:paddingLeft="@dimen/dp16"
+                                android:paddingRight="@dimen/dp16"
+                                android:text="&#8942;"
+                                android:textAppearance="?android:textAppearanceLarge" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/related_ids"
+                                android:layout_below="@+id/suject_ids"
+                                android:weightSum="4">
+
+                                <TextView
+                                    android:id="@+id/text_rel"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:layout_below="@+id/bill_city"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:text="Related To"
+                                    android:textColor="@color/gray"
+                                    android:textSize="15sp"
+                                    />
+                                <TextView
+                                    android:id="@+id/related_to"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/text_rel"
+                                    android:layout_weight="2"
+                                    android:textColor="@color/gray"
+                                    android:textSize="15sp"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/assigned_user_ids"
+                                android:layout_below="@+id/related_ids"
+                                android:weightSum="4">
+
+                                <TextView
+                                    android:id="@+id/text_ass"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:layout_below="@+id/bill_city"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:text="Assigned To"
+                                    android:textColor="@color/gray"
+                                    android:textSize="15sp"
+                                    />
+                                <TextView
+                                    android:id="@+id/assigned_to"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/text_ass"
+                                    android:layout_weight="2"
+                                    android:textColor="@color/gray"
+                                    android:textSize="15sp"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/schedule_dates"
+                                android:weightSum="4"
+                                android:layout_below="@+id/assigned_user_ids">
+
+                                <TextView
+                                    android:id="@+id/text_sc"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/schedule_dates"
+                                    android:paddingLeft="16dp"
+                                    android:text="Modified Time"
+                                    android:paddingRight="16dp"
+                                    android:layout_weight="2"
+                                    android:textColor="@color/gray"
+                                    android:textSize="15sp"
+                                    />
+                                <TextView
+                                    android:id="@+id/schedule_date"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/text_sc"
+                                    android:layout_weight="2"
+                                    android:background="@color/linecolor"
+                                    android:textColor="@color/White"
+                                    android:textSize="15sp"/>
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/schedule_date1"-->
+<!--                                    style="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:visibility="gone"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_below="@+id/text_sc"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:background="@color/linecolor"-->
+<!--                                    android:gravity="left"-->
+<!--                                    android:text="2020-03-12"-->
+<!--                                    android:textColor="@color/White"-->
+<!--                                    android:textSize="15sp"/>-->
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/locations"
+                                android:weightSum="4"
+                                android:layout_below="@+id/schedule_dates">
+
+                                <TextView
+                                    android:id="@+id/text_loc"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/bill_district"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:text="Location"
+                                    android:layout_weight="2"
+                                    android:textColor="@color/gray"
+                                    android:textSize="15sp"
+                                    />
+                                <TextView
+                                    android:id="@+id/location"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/text_loc"
+                                    android:layout_weight="2"
+                                    android:paddingRight="16dp"
+                                    android:textColor="@color/gray"
+                                    android:textSize="15sp"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/opp_nos"
+                                android:weightSum="4"
+                                android:paddingBottom="3dp"
+                                android:layout_below="@+id/locations">
+
+                                <TextView
+                                    android:id="@+id/text_opp"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/bill_district"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:text="Opportunity Name"
+                                    android:layout_weight="2"
+                                    android:textColor="@color/gray"
+                                    android:textSize="15sp"
+                                    />
+                                <TextView
+                                    android:id="@+id/opp_no"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/text_opp"
+                                    android:layout_weight="2"
+                                    android:paddingRight="16dp"
+                                    android:textColor="@color/gray"
+                                    android:textSize="15sp"/>
+                            </LinearLayout>
+
+
+<!--                                                    <TextView-->
+<!--                                                        android:id="@+id/textViewOptions"-->
+<!--                                                        android:layout_width="wrap_content"-->
+<!--                                                        android:layout_height="wrap_content"-->
+<!--                                                        android:layout_alignParentRight="true"-->
+<!--                                                        android:layout_alignParentTop="true"-->
+<!--                                                        android:paddingLeft="@dimen/activity_horizontal_margin"-->
+<!--                                                        android:focusable="false"-->
+<!--                                                        android:text="&#8942;"-->
+<!--                                                        android:textColor="@color/gray"-->
+<!--                                                        android:layout_marginRight="10dp"-->
+<!--                                                        android:textAppearance="?android:textAppearanceLarge" />-->
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/slivergray"
+                                android:layout_below="@id/opp_nos"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="4"
+                                android:layout_marginBottom="6dp"
+                                android:layout_below="@id/opp_nos">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="16dp"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/status"
+                                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:text="Status"
+                                        android:textColor="@color/White"
+                                        android:layout_marginTop="8dp"
+                                        android:background="@drawable/border"
+                                        android:textAllCaps="true"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="2"
+                                    android:layout_gravity="right"
+                                    android:layout_marginBottom="3dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/outcomess"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/statuss"
+                                        android:layout_marginTop="4dp"
+                                        android:orientation="horizontal"
+                                        android:paddingBottom="10dp"
+                                        android:weightSum="4">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:layout_weight="2"
+                                            >
+
+                                            <TextView
+                                                android:id="@+id/outcome"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="Outcome"
+                                                android:gravity="center"
+                                                android:layout_gravity="center"
+                                                android:textSize="15sp" />
+
+                                            <ImageView
+                                                android:id="@+id/image"
+                                                android:layout_width="20dp"
+                                                android:layout_marginTop="8dp"
+                                                android:layout_height="20dp"
+                                                android:gravity="center"
+                                                android:layout_marginBottom="5dp"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="1">
+
+                                            </ImageView>
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                    <!--                    </LinearLayout>-->
+
+                </androidx.cardview.widget.CardView>
+
+
+<!--            </com.daimajia.swipe.SwipeLayout>-->
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

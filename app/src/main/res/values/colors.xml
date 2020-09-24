@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#115766</color>
+    <color name="colorPrimaryDark">#0097A7</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="White">#FFFFFF</color>
+    <color name="back_blue">#F0F9FB</color>
+    <color name="bgBottomNavigation">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#696969</color>
+    <color name="slivergray">#C0C0C0</color>
+    <color name="colorTextPrimary">#FFFFFF</color>
+
+    <color name="trans">#8C000000</color>
+
+
+
+
+    <color name="colorPrimary1">#795548</color>
+    <color name="colorPrimaryDark1">#5d4037</color>
+    <color name="password">#00b8d4</color>
+
+    <color name="tabs">#1F6878</color>
+
+    //content
+
+    <color name="tabs1">#208399</color>
+    //indicator line
+    <color name="linecolor">#26B2D1</color>
+
+    <color name="buttons">#1F7386</color>
+<!--    //save and cancel-->
+    <color name="red">#FF0000</color>
+    <color name="orange">#ff8c00</color>
+    <color name="green">#2aad67</color>
+    <color name="blue">#347aeb</color>
+    <color name="hint_color">#cc0029</color>
+
+
+<color name="line_color_form">#D1EDF3</color>
+<!--    //line color -->
+    <color name="colorControlNormal">#c5c5c5</color>
+    <color name="colorControlActivated">@color/colorAccent</color>
+    <color name="colorControlHighlight">@color/colorAccent</color>
+
+
+    <color name="app_color">#8EAE3C</color>
+    <color name="list_item_background">#AACCCCCC</color>
+
+</resources>

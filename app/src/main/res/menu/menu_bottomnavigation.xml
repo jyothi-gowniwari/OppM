@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/task"
+            android:title="@string/title_task"
+            android:icon="@drawable/ic_event_note_black_24dp"
+            android:textSize="16sp"/>
+        <item
+            android:id="@+id/account"
+            android:title="@string/title_account"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:textSize="16sp"/>
+        <item
+            android:id="@+id/contact"
+            android:title="@string/title_contact"
+            android:icon="@drawable/ic_contacts_black_24dp"
+            android:textSize="16sp"/>
+        <item
+            android:id="@+id/opportunity"
+            android:title="@string/title_opportunity"
+            android:icon="@drawable/opportunity_bottom"
+            android:textSize="1sp" />
+    </group>
+</menu>
